@@ -1,0 +1,14 @@
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\bin\Debug\Simulacion.exe.config
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\bin\Debug\Simulacion.exe
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\bin\Debug\Simulacion.pdb
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\bin\Debug\Octave.NET.dll
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\bin\Debug\Octave.NET.xml
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.csproj.AssemblyReference.cache
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.Form1.resources
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.Properties.Resources.resources
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.csproj.GenerateResource.cache
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.csproj.CoreCompileInputs.cache
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.csproj.CopyComplete
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.exe
+C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.pdb

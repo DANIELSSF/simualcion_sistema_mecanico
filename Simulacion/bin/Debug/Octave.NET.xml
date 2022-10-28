@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Octave.NET</name>
+    </assembly>
+    <members>
+        <member name="T:Octave.NET.OctaveContext">
+            <summary>
+            Octave execution context.
+            </summary>
+        </member>
+        <member name="M:Octave.NET.OctaveContext.Execute(System.String,System.Int32)">
+            <summary>
+                Execute command and return raw response.
+            </summary>
+            <param name="command"></param>
+            <param name="timeout"></param>
+            <exception cref="T:Octave.NET.Core.Exceptions.OctaveCommandTimeoutException"></exception>
+            <exception cref="T:Octave.NET.Core.Exceptions.OctaveScriptError"></exception>
+        </member>
+        <member name="M:Octave.NET.OctaveDoubleExtensions.ToOctave(System.Double[])">
+            <summary>
+            Convert array of doubles to octave input (vector).
+            </summary>
+        </member>
+        <member name="M:Octave.NET.OctaveDoubleExtensions.ToOctave(System.Double[][])">
+            <summary>
+            Convert two-dimensional array of doubles to octave input (matrix).
+            </summary>
+        </member>
+        <member name="P:Octave.NET.OctaveSettings.MaximumConcurrency">
+            <summary>
+                Maximum number of octave processes which can be simultaneously spawned. Defaults to the number of processors.
+            </summary>
+        </member>
+        <member name="P:Octave.NET.OctaveSettings.OctaveCliPath">
+            <summary>
+                Path to the octave-cli.exe binary. Can be automatically detected if added to PATH variable.
+            </summary>
+        </member>
+        <member name="P:Octave.NET.OctaveSettings.PreventColdStarts">
+            <summary>
+                When set to true, octave processes will never be killed even if they are idle for very long time. Defaults to
+                false.
+            </summary>
+        </member>
+        <member name="P:Octave.NET.OctaveSettings.RemoveIdleWorkersTimePeriodMs">
+            <summary>
+                How often should it check for idle workers and dispose them. Defaults to 10000.
+            </summary>
+        </member>
+    </members>
+</doc>
