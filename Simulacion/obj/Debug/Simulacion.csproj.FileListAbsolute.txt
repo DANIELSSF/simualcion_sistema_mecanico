@@ -12,3 +12,17 @@ C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.cspro
 C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.csproj.CopyComplete
 C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.exe
 C:\Users\DANIELSSF\source\repos\Simulacion\Simulacion\obj\Debug\Simulacion.pdb
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\obj\Debug\Simulacion.csproj.AssemblyReference.cache
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\obj\Debug\Simulacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\obj\Debug\Simulacion.Form1.resources
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\obj\Debug\Simulacion.Properties.Resources.resources
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\obj\Debug\Simulacion.csproj.GenerateResource.cache
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\obj\Debug\Simulacion.csproj.CoreCompileInputs.cache
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\obj\Debug\Simulacion.exe
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\obj\Debug\Simulacion.pdb
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\bin\Debug\Simulacion.exe.config
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\bin\Debug\Simulacion.exe
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\bin\Debug\Simulacion.pdb
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\bin\Debug\Octave.NET.dll
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\bin\Debug\Octave.NET.xml
+C:\Users\pc\Documents\Programing\C#\Simulacion por computador\simualcion_sistema_mecanico\Simulacion\obj\Debug\Simulacion.csproj.CopyComplete
