@@ -30,7 +30,9 @@ namespace Simulacion
         int x0k6;
         int w0k7;
         int w0b1;
+        int x0b2;
         int w0b2;
+        int x0b3;
         int w0b3;
         int w0k4;
         int w0k5;
@@ -57,6 +59,11 @@ namespace Simulacion
             w0k6 = pbk6.Height;
             w0k7 = pbk7.Height;
             x0k7 = pbk7.Top;
+            w0b1 = pbb1.Height;
+            w0b2 = pbb2.Height;
+            w0b3 = pbb3.Height;
+            x0b2 = pbb2.Top;
+            x0b3 = pbb3.Top;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -169,24 +176,33 @@ namespace Simulacion
             chart1.Series[0].Points.AddXY(vectort[i], vector1[i]);
             chart2.Series[0].Points.AddXY(vectort[i], vector2[i]);
             chart3.Series[0].Points.AddXY(vectort[i], vector3[i]);
-
+            //masas
             pbm1.Location = new Point(pbm1.Location.X, x0m1 + Convert.ToInt32(vector1[i] * 500));
             pbm2.Location = new Point(pbm2.Location.X, x0m2 + Convert.ToInt32(vector2[i] * 500));
             pbm3.Location = new Point(pbm3.Location.X, x0m3 + Convert.ToInt32(vector3[i] * 500));
 
+            //resortes
             pbk1.Height = w0k1 + Convert.ToInt32(vector1[i] * 500);
             pbk2.Height = w0k2 + Convert.ToInt32(vector1[i] * 500);
             pbk3.Height = w0k3 + Convert.ToInt32(vector2[i] * 500);
             pbk4.Top = x0k4 + Convert.ToInt32(vector1[i] * 500);
             pbk5.Top = x0k5 + Convert.ToInt32(vector1[i] * 500);
             pbk6.Top = x0k6 + Convert.ToInt32(vector2[i] * 500);
-            pbk4.Height = w0k4 - Convert.ToInt32(vector3[i] * 500);
-            pbk5.Height = w0k5 - Convert.ToInt32(vector3[i] * 500);
-            pbk6.Height = w0k6 - Convert.ToInt32(vector3[i] * 500);
+            pbk4.Height = w0k4 + Convert.ToInt32(vector3[i] * 500) - Convert.ToInt32(vector1[i] * 500);
+            pbk5.Height = w0k5 + Convert.ToInt32(vector3[i] * 500) - Convert.ToInt32(vector1[i] * 500);
+            pbk6.Height = w0k6 + Convert.ToInt32(vector3[i] * 500) - Convert.ToInt32(vector2[i] * 500);
 
             pbk7.Height = w0k7 - Convert.ToInt32(vector3[i] * 500);
             pbk7.Top = x0k7 + Convert.ToInt32(vector3[i] * 500);
 
+            //amortiguadores
+            pbb1.Height = w0b1 + Convert.ToInt32(vector2[i] * 500);
+
+            pbb2.Height = w0b2 - Convert.ToInt32(vector2[i] * 500) + Convert.ToInt32(vector3[i] * 500);
+            pbb2.Top = x0b2 + Convert.ToInt32(vector2[i] * 500);
+
+            pbb3.Height = w0b3 - Convert.ToInt32(vector3[i] * 500);
+            pbb3.Top = x0b3 + Convert.ToInt32(vector3[i] * 500);
             i++;
             if (i == Int32.Parse(tbpos.Text))
             {
