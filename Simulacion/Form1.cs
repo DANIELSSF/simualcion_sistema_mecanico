@@ -12,6 +12,12 @@ namespace Simulacion
 {
     public partial class Form1 : Form
     {
+        int i = 0;
+        int j = 0;
+        double[] vector1 = new double[3];
+        double[] vector2 = new double[3];
+        double[] vector3 = new double[3];
+        double[] vectort = new double[3];
         public Form1()
         {
             InitializeComponent();
