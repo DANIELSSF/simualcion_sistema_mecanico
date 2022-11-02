@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Simulacion
 {
@@ -83,7 +84,23 @@ namespace Simulacion
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            if (comboBox2.Text == "Respuesta al Paso")
+            {
+                chartm1.Show();
+                chartm2.Show();
+                chartm3.Show();
+                charttiempom1.Hide();
+                charttiempom2.Hide();
+                charttiempom3.Hide();
+            }
+            else {
+                chartm1.Hide();
+                chartm2.Hide();
+                chartm3.Hide();
+                charttiempom1.Show();
+                charttiempom2.Show();
+                charttiempom3.Show();
+            }
         }
 
         private void Rtiempo_Click(object sender, EventArgs e)
@@ -119,10 +136,10 @@ namespace Simulacion
         private void buttonprocess_Click(object sender, EventArgs e)
         {
             i = 0;
-            chart1.Series[0].Points.Clear();
-            chart2.Series[0].Points.Clear();
-            chart3.Series[0].Points.Clear();
-            OctaveContext.OctaveSettings.OctaveCliPath = @"C:\Program Files\GNU Octave\Octave-7.2.0\mingw64\bin\octave-cli.exe";
+            chartm1.Series[0].Points.Clear();
+            chartm2.Series[0].Points.Clear();
+            chartm3.Series[0].Points.Clear();
+            OctaveContext.OctaveSettings.OctaveCliPath = @""+tbOctave.Text;
             var Octave = new OctaveContext();
             string instrucciones = "clc;"
                                     + "clear;"
@@ -167,15 +184,15 @@ namespace Simulacion
             vector2 = Octave.Execute("y2").AsVector();
             vector3 = Octave.Execute("y3").AsVector();
 
-            buttonprocess.Enabled = true;
+            buttonprocess.Enabled = false;
             timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            chart1.Series[0].Points.AddXY(vectort[i], vector1[i]);
-            chart2.Series[0].Points.AddXY(vectort[i], vector2[i]);
-            chart3.Series[0].Points.AddXY(vectort[i], vector3[i]);
+            chartm1.Series[0].Points.AddXY(vectort[i], vector1[i]);
+            chartm2.Series[0].Points.AddXY(vectort[i], vector2[i]);
+            chartm3.Series[0].Points.AddXY(vectort[i], vector3[i]);
             //masas
             pbm1.Location = new Point(pbm1.Location.X, x0m1 + Convert.ToInt32(vector1[i] * 500));
             pbm2.Location = new Point(pbm2.Location.X, x0m2 + Convert.ToInt32(vector2[i] * 500));
@@ -204,10 +221,73 @@ namespace Simulacion
             pbb3.Height = w0b3 - Convert.ToInt32(vector3[i] * 500);
             pbb3.Top = x0b3 + Convert.ToInt32(vector3[i] * 500);
             i++;
+
             if (i == Int32.Parse(tbpos.Text))
             {
+                dataGridView1.ColumnCount = 16;
+                dataGridView1.Columns[0].Name = "K1";
+                dataGridView1.Columns[1].Name = "K2";
+                dataGridView1.Columns[2].Name = "K3";
+                dataGridView1.Columns[3].Name = "K4";
+                dataGridView1.Columns[4].Name = "K5";
+                dataGridView1.Columns[5].Name = "K6";
+                dataGridView1.Columns[6].Name = "K7";
+                dataGridView1.Columns[7].Name = "B1";
+                dataGridView1.Columns[8].Name = "B2";
+                dataGridView1.Columns[9].Name = "B3";
+                dataGridView1.Columns[10].Name = "M1";
+                dataGridView1.Columns[11].Name = "M2";
+                dataGridView1.Columns[12].Name = "M3";
+
+
+                dataGridView1.Rows.Add();
+                dataGridView1.Rows[j].Cells[0].Value = tbk1.Text;
+                dataGridView1.Rows[j].Cells[1].Value = tbk2.Text;
+                dataGridView1.Rows[j].Cells[2].Value = tbk3.Text;
+                dataGridView1.Rows[j].Cells[3].Value = tbk4.Text;
+                dataGridView1.Rows[j].Cells[4].Value = tbk5.Text;
+                dataGridView1.Rows[j].Cells[5].Value = tbk6.Text;
+                dataGridView1.Rows[j].Cells[6].Value = tbk7.Text;
+                dataGridView1.Rows[j].Cells[7].Value = tbb1.Text;
+                dataGridView1.Rows[j].Cells[8].Value = tbb2.Text;
+                dataGridView1.Rows[j].Cells[9].Value = tbb3.Text;
+                dataGridView1.Rows[j].Cells[10].Value = textm1.Text;
+                dataGridView1.Rows[j].Cells[11].Value = textm2.Text;
+                dataGridView1.Rows[j].Cells[12].Value = textm3.Text;
+
+                Bitmap captura = new Bitmap(chartm1.Width, chartm1.Height); 
+                chartm1.DrawToBitmap(captura, chartm1.DisplayRectangle); 
+                dataGridView1.Rows[j].Cells[13].Value = captura;
+
+                Bitmap captura2 = new Bitmap(chartm2.Width, chartm2.Height);
+                chartm2.DrawToBitmap(captura2, chartm2.DisplayRectangle);
+                dataGridView1.Rows[j].Cells[14].Value = captura2;
+
+                Bitmap captura3 = new Bitmap(chartm3.Width, chartm3.Height);
+                chartm3.DrawToBitmap(captura3, chartm3.DisplayRectangle);
+                dataGridView1.Rows[j].Cells[15].Value = captura3;
+                j++;
+
                 timer1.Enabled = false;
+                buttonprocess.Enabled = true;
+
+
             }
+        }
+
+        private void pbm1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
