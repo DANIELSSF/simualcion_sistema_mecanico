@@ -224,21 +224,7 @@ namespace Simulacion
 
             if (i == Int32.Parse(tbpos.Text))
             {
-                dataGridView1.ColumnCount = 16;
-                dataGridView1.Columns[0].Name = "K1";
-                dataGridView1.Columns[1].Name = "K2";
-                dataGridView1.Columns[2].Name = "K3";
-                dataGridView1.Columns[3].Name = "K4";
-                dataGridView1.Columns[4].Name = "K5";
-                dataGridView1.Columns[5].Name = "K6";
-                dataGridView1.Columns[6].Name = "K7";
-                dataGridView1.Columns[7].Name = "B1";
-                dataGridView1.Columns[8].Name = "B2";
-                dataGridView1.Columns[9].Name = "B3";
-                dataGridView1.Columns[10].Name = "M1";
-                dataGridView1.Columns[11].Name = "M2";
-                dataGridView1.Columns[12].Name = "M3";
-
+                
 
                 dataGridView1.Rows.Add();
                 dataGridView1.Rows[j].Cells[0].Value = tbk1.Text;
@@ -254,18 +240,20 @@ namespace Simulacion
                 dataGridView1.Rows[j].Cells[10].Value = textm1.Text;
                 dataGridView1.Rows[j].Cells[11].Value = textm2.Text;
                 dataGridView1.Rows[j].Cells[12].Value = textm3.Text;
+                dataGridView1.Rows[j].Cells[13].Value = tbpos.Text;
+
 
                 Bitmap captura = new Bitmap(chartm1.Width, chartm1.Height); 
                 chartm1.DrawToBitmap(captura, chartm1.DisplayRectangle); 
-                dataGridView1.Rows[j].Cells[13].Value = captura;
+                dataGridView1.Rows[j].Cells[14].Value = captura;
 
                 Bitmap captura2 = new Bitmap(chartm2.Width, chartm2.Height);
                 chartm2.DrawToBitmap(captura2, chartm2.DisplayRectangle);
-                dataGridView1.Rows[j].Cells[14].Value = captura2;
+                dataGridView1.Rows[j].Cells[15].Value = captura2;
 
                 Bitmap captura3 = new Bitmap(chartm3.Width, chartm3.Height);
                 chartm3.DrawToBitmap(captura3, chartm3.DisplayRectangle);
-                dataGridView1.Rows[j].Cells[15].Value = captura3;
+                dataGridView1.Rows[j].Cells[16].Value = captura3;
                 j++;
 
                 timer1.Enabled = false;
@@ -286,6 +274,11 @@ namespace Simulacion
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
         {
 
         }
